@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Eclipse環境構築メモ &mdash; DocEclipseHowTo 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/my_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to DocEclipseHowTo’s documentation!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DocEclipseHowTo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Eclipse環境構築メモ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1. Eclipseのインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2. Eclipse起動</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3. 初期設定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3-1. テキストエンコードの種類</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3-2. フォントの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scalabillity">3-3. Scalabillity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tab">3-4. Tab幅と表示</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">4. プロジェクトをインポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">5. コンパイラを設定する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">6. 機能の紹介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#call-hierarchy">6-1. Call Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">6-2. 関数ジャンプ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">6-3. 値の参照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editorerror">6-4. Editor内にError検出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">6-5. プリプロセッサをグレーアウト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">6-6. 保管機能</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">その他・・・・・・。</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DocEclipseHowTo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Eclipse環境構築メモ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/SETUP.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eclipse">
+<h1>Eclipse環境構築メモ<a class="headerlink" href="#eclipse" title="Permalink to this headline">¶</a></h1>
+<p>Eclipseで快適なC言語開発環境を実現する。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">作成日:</th><td class="field-body">2018/07/17</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h2>はじめに<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Windows 7 64bit環境にて作業を行った。</p>
+</div>
+<div class="section" id="id2">
+<h2>1. Eclipseのインストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>最新のEclipse IDE for C/C++をインストールする。
+2018/7/17現在の最新はPhotonなので “Photon Packages” の “Eclipse IDE for C/C++ Developers” をダウンロードする。
+<a class="reference external" href="https://www.eclipse.org/downloads/packages/">https://www.eclipse.org/downloads/packages/</a></p>
+<a class="reference internal image-reference" href="_images/EclipseVersion.png"><img alt="_images/EclipseVersion.png" class="align-center" src="_images/EclipseVersion.png" style="width: 306.0px; height: 447.0px;" /></a>
+<p>ダウンロードしたEclipseはCドライブ直下に解凍します。これでEclipseのインストールは終了。
+ショートカットをデスクトップやツールバーに追加しておく。</p>
+<a class="reference internal image-reference" href="_images/EclipseInstall.png"><img alt="_images/EclipseInstall.png" class="align-center" src="_images/EclipseInstall.png" style="width: 840.0px; height: 395.0px;" /></a>
+</div>
+<div class="section" id="id3">
+<h2>2. Eclipse起動<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>最初にEclipseを開くとワークスペースのディレクトリ設定画面になります。”この選択をデフォルトとして今後この質問に回答しない”にチェックしてOK。</p>
+<a class="reference internal image-reference" href="_images/EclipseLauncher.png"><img alt="_images/EclipseLauncher.png" class="align-center" src="_images/EclipseLauncher.png" style="width: 626.0px; height: 286.0px;" /></a>
+<p>次にWelcome画面が表示されますが、右下の”毎回Welcomeを表示する”のチェックを外して、Welcome画面を閉じる。</p>
+<a class="reference internal image-reference" href="_images/EclipseWelcome.png"><img alt="_images/EclipseWelcome.png" class="align-center" src="_images/EclipseWelcome.png" style="width: 776.0px; height: 520.0px;" /></a>
+<p>これでEclipse起動が完了。上記作業は次回起動時から不要｡</p>
+</div>
+<div class="section" id="id4">
+<h2>3. 初期設定<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>3-1. テキストエンコードの種類<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>プロジェクトAはSHIFT-JIS, プロジェクトBはUTF-8..というようにEclipseはプロジェクト毎にエンコード設定を変えられない。（自分がやり方を知らないだけかもしれないが。）
+従って一括のエンコードの種類を設定する。Window -&gt; Prefarences -&gt; General -&gt; Workspace -&gt; Text file encoding から other をチェックし、
+“UTF-8”を手打ちしてApply and Closeする。もしUTF-8やSHIFT-JISなど種類が分かれている場合は、Eclipseを使う前に全てUTF-8にコンバートするのが最も効率が良いと思う。
+何かしらの理由によって出来ない場合は、Workspaceのエンコード種別を”SHIFT-JIS”にすればOK。</p>
+<a class="reference internal image-reference" href="_images/Unicode.png"><img alt="_images/Unicode.png" class="align-center" src="_images/Unicode.png" style="width: 747.0px; height: 678.0px;" /></a>
+</div>
+<div class="section" id="id6">
+<h3>3-2. フォントの設定<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>フォントをプロジェクトで使われているものにあわせる。（文字化けしたりスペース/タブが合わないことがあるので。）</p>
+<a class="reference internal image-reference" href="_images/MSGosic.png"><img alt="_images/MSGosic.png" class="align-center" src="_images/MSGosic.png" style="width: 757.0px; height: 583.0px;" /></a>
+</div>
+<div class="section" id="scalabillity">
+<h3>3-3. Scalabillity<a class="headerlink" href="#scalabillity" title="Permalink to this headline">¶</a></h3>
+<p>デフォルトでは5000行以上のテキストが表示できない。20000に変更する。
+Window -&gt; Prefarences -&gt; C/C++ -&gt; Editor -&gt; Scalability -&gt; Enable scalability mode when …. 5000 から 20000 に変更</p>
+<a class="reference internal image-reference" href="_images/Scallabillity.png"><img alt="_images/Scallabillity.png" class="align-center" src="_images/Scallabillity.png" style="width: 775.0px; height: 476.0px;" /></a>
+</div>
+<div class="section" id="tab">
+<h3>3-4. Tab幅と表示<a class="headerlink" href="#tab" title="Permalink to this headline">¶</a></h3>
+<p>Tab幅をプロジェクト統一の数値に合わせ、SpaceとTabを表示するようにします。</p>
+<a class="reference internal image-reference" href="_images/TextEditor.png"><img alt="_images/TextEditor.png" class="align-center" src="_images/TextEditor.png" style="width: 643.0px; height: 799.0px;" /></a>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>4. プロジェクトをインポート<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>SVNやGithubからチェックアウトしたプロジェクトをEclipseにインポートしてみる。
+Eclipseプロジェクトではない場合は以下の手順でインポートできる。
+Eclipseプロジェクトの場合はImport -&gt; General -&gt; Existing Projects into Workspaceで次へ進み、
+プロジェクトを認識すればOK。</p>
+<a class="reference internal image-reference" href="_images/import.png"><img alt="_images/import.png" class="align-center" src="_images/import.png" style="width: 434.0px; height: 574.0px;" /></a>
+<a class="reference internal image-reference" href="_images/import2.png"><img alt="_images/import2.png" class="align-center" src="_images/import2.png" style="width: 519.0px; height: 548.0px;" /></a>
+<a class="reference internal image-reference" href="_images/import3.png"><img alt="_images/import3.png" class="align-center" src="_images/import3.png" style="width: 519.0px; height: 559.0px;" /></a>
+</div>
+<div class="section" id="id8">
+<h2>5. コンパイラを設定する<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>各々、使用しているコンパイラ環境を設定する・・・。</p>
+</div>
+<div class="section" id="id9">
+<h2>6. 機能の紹介<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="call-hierarchy">
+<h3>6-1. Call Hierarchy<a class="headerlink" href="#call-hierarchy" title="Permalink to this headline">¶</a></h3>
+<p>関数などの呼び出し元を階層で表示することが可能。
+(<a class="reference external" href="http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.cdt.doc.user%2Freference%2Fcdt_u_call_hierarchy_view.htm">http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.cdt.doc.user%2Freference%2Fcdt_u_call_hierarchy_view.htm</a>)</p>
+<a class="reference internal image-reference" href="_images/CallHerarcy.png"><img alt="_images/CallHerarcy.png" class="align-center" src="_images/CallHerarcy.png" style="width: 577.0px; height: 305.0px;" /></a>
+</div>
+<div class="section" id="id10">
+<h3>6-2. 関数ジャンプ<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>関数上でCtrl+クリックで関数定義までとべる。</p>
+</div>
+<div class="section" id="id11">
+<h3>6-3. 値の参照<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>カーソルを合わせると定義された値が自動的に表示される。</p>
+<a class="reference internal image-reference" href="_images/Kersol.png"><img alt="_images/Kersol.png" class="align-center" src="_images/Kersol.png" style="width: 600.0px; height: 225.0px;" /></a>
+</div>
+<div class="section" id="editorerror">
+<h3>6-4. Editor内にError検出<a class="headerlink" href="#editorerror" title="Permalink to this headline">¶</a></h3>
+<p>Syntaxエラーなど検出すると即Editorに表示して通知。</p>
+<a class="reference internal image-reference" href="_images/SyntaxError.png"><img alt="_images/SyntaxError.png" class="align-center" src="_images/SyntaxError.png" style="width: 314.0px; height: 140.0px;" /></a>
+</div>
+<div class="section" id="id12">
+<h3>6-5. プリプロセッサをグレーアウト<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>プリプロセッサによりコンパイルされない箇所は自動的にグレーアウト。</p>
+<a class="reference internal image-reference" href="_images/Preprocessor.png"><img alt="_images/Preprocessor.png" class="align-center" src="_images/Preprocessor.png" style="width: 500.0px; height: 423.0px;" /></a>
+</div>
+<div class="section" id="id13">
+<h3>6-6. 保管機能<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>メンバ変数などのタイプが楽</p>
+<a class="reference internal image-reference" href="_images/Savefunc.png"><img alt="_images/Savefunc.png" class="align-center" src="_images/Savefunc.png" style="width: 366.0px; height: 217.0px;" /></a>
+<p>などなど・・・・</p>
+<p>お勧め（<a class="reference external" href="https://qiita.com/arai-wa/items/c2eb7387b5bf37b4ace4">https://qiita.com/arai-wa/items/c2eb7387b5bf37b4ace4</a>）</p>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>その他・・・・・・。<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">タブ横の(×)マークを消す:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>ファイルを沢山開くとタブの(×)クローズボタンで間違ってクローズしてしまうことが多発しストレスになるのでこのボタンは消す。
+(<a class="reference external" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=362176">https://bugs.eclipse.org/bugs/show_bug.cgi?id=362176</a>)
+他にもいろいろカスタマイズ可能。もちろん秀丸やサクラエディタのようにキーのカスタマイズも可能。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to DocEclipseHowTo’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Mark.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
